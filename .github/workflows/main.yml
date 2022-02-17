@@ -1,5 +1,5 @@
 on: workflow_dispatch
-name: :rocket: Deploy website
+name: Checkout code
 jobs:
   web-deploy:
     name: :tada: Deploy
