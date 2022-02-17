@@ -1,5 +1,8 @@
-on: workflow_dispatch
-name: Checkout code
+on:
+  push:
+    branches:
+      - main
+name: Test 
 jobs:
   web-deploy:
     name: Deploy
@@ -9,10 +12,10 @@ jobs:
       uses: actions/checkout@v2
     
     - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: i-glms.com
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./
-        server-dir: /test-project
+        server-dir: test-project/
