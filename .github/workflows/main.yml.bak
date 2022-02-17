@@ -2,13 +2,13 @@ on: workflow_dispatch
 name: Checkout code
 jobs:
   web-deploy:
-    name: :tada: Deploy
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: :truck: Get latest code
+    - name: Get latest code
       uses: actions/checkout@v2
     
-    - name: :open_file_folder: Sync files
+    - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.2.0
       with:
         server: i-glms.com
