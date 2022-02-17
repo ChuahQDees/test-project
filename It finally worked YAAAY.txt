@@ -1,0 +1,4 @@
+https://www.tutsplanet.com/automating-ftp-deployments-with-github-actions/
+https://github.com/SamKirkland/FTP-Deploy-Action/blob/master/action.yml
+
+Refer to the guide here if you want to push your changes into the QDees Filezilla FTP Server
