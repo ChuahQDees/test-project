@@ -1,0 +1,18 @@
+on: workflow_dispatch
+name: :rocket: Deploy website
+jobs:
+  web-deploy:
+    name: :tada: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: :truck: Get latest code
+      uses: actions/checkout@v2
+    
+    - name: :open_file_folder: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      with:
+        server: i-glms.com
+        username: ${{ secrets.ftp_username }}
+        password: ${{ secrets.ftp_password }}
+        local-dir: ./
+        server-dir: test-project/
