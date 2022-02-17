@@ -3,3 +3,5 @@ Hello world! How are you all doing?
 Pipeline test
 
 Edit: Typo fix
+
+Edit 2: Updated Actions in GitHub
